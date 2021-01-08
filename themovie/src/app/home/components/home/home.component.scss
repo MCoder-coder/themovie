@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #ededed;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 5px;
+    font-style: black;
+}
+
+#main-container {
+    margin: 50px auto;
+    width: 80%;
+}
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie-card {
+    border-radius: 5px;
+    box-shadow: -1px 1px 8px #828282, 1px -1px 8px #828282;
+    margin: 10px;
+    transition-duration: 300ms;
+    height: 400px;
+    width: 250px;
+    img {
+        transition-duration: 300ms;
+        border-radius: 5px 5px 0 0;
+        height: 300px;
+        width: inherit;
+    }
+    .desc {
+        padding: 0 1rem;
+    }
+    &:hover {
+        background-color: #bdbdbd;
+        box-shadow: -1px 1px 10px 1px #828282, 1px -1px 10px 1px #828282;
+        img {
+            filter: brightness(50%);
+        }
+    }
+}

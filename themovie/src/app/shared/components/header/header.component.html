@@ -1,1 +1,11 @@
-<p>header works!</p>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of images">
+            <img [src]="item" alt="">
+        </div>
+
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>

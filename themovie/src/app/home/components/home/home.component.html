@@ -1,350 +1,50 @@
-<div class="container p-0">
+<!-- <div id="main-container">
+    <div id="movie-list">
 
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://www.softaox.info">AOX Movies</a>
-        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-        <ul class="navbar-nav px-3">
-            <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">SignUp</a>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                <span data-feather="home"></span>
-                                <i class="material-icons">movie</i> Videos <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file"></span>
-                                <i class="material-icons">videocam</i> Movies & Shows
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="shopping-cart"></span>
-                                <i class="material-icons">card_giftcard</i> Premium Contents
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="users"></span>
-                                <i class="material-icons">play_arrow</i> Live
-                            </a>
-                        </li>
-                    </ul>
-
-                    <hr/>
-
-                    <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                <i class="material-icons">receipt</i> Subscriptions
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                <i class="material-icons">perm_media</i> Library
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                <i class="material-icons">link</i> Linked Videos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                <i class="material-icons">watch_later</i> Watch Later
-                            </a>
-                        </li>
-                    </ul>
-
-                    <hr/>
-
-                    <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                <i class="material-icons">settings</i> Settings
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                <i class="material-icons">help</i> Help & Report
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-            </nav>
-
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 movie_list">
-                <div class="pt-8 pb-2 mb-3 border-bottom">
-
-                    <div class="row">
-                        <h1>Movies</h1>
-                    </div>
-
-                    <div class="row">
-
-                        <!-- Movie Card Start -->
-                        <div class="card-view">
-                            <div class="card-header avengerEndgame">
-                                <div class="card-header-icon">
-                                    <a href="#">
-                                        <i class="material-icons header-icon">play_arrow</i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="card-movie-content">
-                                <div class="card-movie-content-head">
-                                    <a href="#">
-                                        <h3 class="card-movie-title">Avengers: Endgame</h3>
-                                    </a>
-                                    <div class="ratings"><span>8.8</span>/10</div>
-                                </div>
-                                <div class="card-movie-info">
-                                    <div class="movie-running-time">
-                                        <label>Last update</label>
-                                        <span>Sun 8 Sept - 10:00PM</span>
-                                    </div>
-                                    <div class="movie-running-time">
-                                        <label>Running time</label>
-                                        <span>2hr 09min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Movie Card End -->
-
-                        <!-- Movie Card Start -->
-                        <div class="card-view">
-                            <div class="card-header hobbsShaw">
-                                <div class="card-header-icon">
-                                    <a href="#">
-                                        <i class="material-icons header-icon">play_arrow</i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-movie-content">
-                                <div class="card-movie-content-head">
-                                    <a href="#">
-                                        <h3 class="card-movie-title">Hobbs & Shaw</h3>
-                                    </a>
-                                    <div class="ratings"><span>9.7</span>/10</div>
-                                </div>
-                                <div class="card-movie-info">
-                                    <div class="movie-running-time">
-                                        <label>Last update</label>
-                                        <span>Tue 4 July - 05:00PM</span>
-                                    </div>
-                                    <div class="movie-running-time">
-                                        <label>Running time</label>
-                                        <span>2hr 13min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Movie Card End -->
-
-                        <!-- Movie Card Start -->
-                        <div class="card-view">
-                            <div class="card-header Johnwick">
-                                <div class="card-header-icon">
-                                    <a href="#">
-                                        <i class="material-icons header-icon">play_arrow</i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-movie-content">
-                                <div class="card-movie-content-head">
-                                    <a href="#">
-                                        <h3 class="card-movie-title">John Wick 3</h3>
-                                    </a>
-                                    <div class="ratings"><span>9.8</span>/10</div>
-                                </div>
-                                <div class="card-movie-info">
-                                    <div class="movie-running-time">
-                                        <label>Last update</label>
-                                        <span>Wed 16 Aug - 07:00PM</span>
-                                    </div>
-                                    <div class="movie-running-time">
-                                        <label>Running time</label>
-                                        <span>2hr 33min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Movie Card End -->
-
-                        <!-- Movie Card Start -->
-                        <div class="card-view">
-                            <div class="card-header deadPool">
-                                <div class="card-header-icon">
-                                    <a href="#">
-                                        <i class="material-icons header-icon">play_arrow</i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-movie-content">
-                                <div class="card-movie-content-head">
-                                    <a href="#">
-                                        <h3 class="card-movie-title">Deadpool 2</h3>
-                                    </a>
-                                    <div class="ratings"><span>7.3</span>/10</div>
-                                </div>
-                                <div class="card-movie-info">
-                                    <div class="movie-running-time">
-                                        <label>Last update</label>
-                                        <span>Mon 16 Oct - 10:00PM</span>
-                                    </div>
-                                    <div class="movie-running-time">
-                                        <label>Running time</label>
-                                        <span>2hr 0min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Movie Card End -->
-
-                        <!-- Movie Card Start -->
-                        <div class="card-view">
-                            <div class="card-header theLionking">
-                                <div class="card-header-icon">
-                                    <a href="#">
-                                        <i class="material-icons header-icon">play_arrow</i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-movie-content">
-                                <div class="card-movie-content-head">
-                                    <a href="#">
-                                        <h3 class="card-movie-title">The Lion King</h3>
-                                    </a>
-                                    <div class="ratings"><span>8.1</span>/10</div>
-                                </div>
-                                <div class="card-movie-info">
-                                    <div class="movie-running-time">
-                                        <label>Last update</label>
-                                        <span>Sun 8 Sept - 10:00PM</span>
-                                    </div>
-                                    <div class="movie-running-time">
-                                        <label>Running time</label>
-                                        <span>2hr 36min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Movie Card End -->
-
-                        <!-- Movie Card Start -->
-                        <div class="card-view">
-                            <div class="card-header madMax">
-                                <div class="card-header-icon">
-                                    <a href="#">
-                                        <i class="material-icons header-icon">play_arrow</i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-movie-content">
-                                <div class="card-movie-content-head">
-                                    <a href="#">
-                                        <h3 class="card-movie-title">Mad Max: Fury Road</h3>
-                                    </a>
-                                    <div class="ratings"><span>7.4</span>/10</div>
-                                </div>
-                                <div class="card-movie-info">
-                                    <div class="movie-running-time">
-                                        <label>Last update</label>
-                                        <span>Tue 8 July - 05:00PM</span>
-                                    </div>
-                                    <div class="movie-running-time">
-                                        <label>Running time</label>
-                                        <span>2hr 19min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Movie Card End -->
-
-                        <!-- Movie Card Start -->
-                        <div class="card-view">
-                            <div class="card-header aquaMan">
-                                <div class="card-header-icon">
-                                    <a href="#">
-                                        <i class="material-icons header-icon">play_arrow</i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-movie-content">
-                                <div class="card-movie-content-head">
-                                    <a href="#">
-                                        <h3 class="card-movie-title">Aquaman</h3>
-                                    </a>
-                                    <div class="ratings"><span>8.1</span>/10</div>
-                                </div>
-                                <div class="card-movie-info">
-                                    <div class="movie-running-time">
-                                        <label>Last update</label>
-                                        <span>Wed 16 Aug - 07:00PM</span>
-                                    </div>
-                                    <div class="movie-running-time">
-                                        <label>Running time</label>
-                                        <span>2hr 14min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Movie Card End -->
-
-                        <!-- Movie Card Start -->
-                        <div class="card-view">
-                            <div class="card-header missionImpossible">
-                                <div class="card-header-icon">
-                                    <a href="#">
-                                        <i class="material-icons header-icon">play_arrow</i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-movie-content">
-                                <div class="card-movie-content-head">
-                                    <a href="#">
-                                        <h3 class="card-movie-title">Mission Impossible</h3>
-                                    </a>
-                                    <div class="ratings"><span>7.8</span>/10</div>
-                                </div>
-                                <div class="card-movie-info">
-                                    <div class="movie-running-time">
-                                        <label>Last update</label>
-                                        <span>Mon 16 Oct - 10:00PM</span>
-                                    </div>
-                                    <div class="movie-running-time">
-                                        <label>Running time</label>
-                                        <span>2hr 33min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Movie Card End -->
-
-                    </div>
-                </div>
-
-            </main>
+        <div class="movie-card" *ngFor="let item of movieArrays">
+            <img src="{{  'http://image.tmdb.org/t/p/w500/'   +item.poster_path}}" alt="">
+            <div class="desc">
+                <h3>{{item.title}}</h3>
+                <p>{{item.popularity}}</p>
+            </div>
         </div>
+
+
+
+    </div>
+
+</div> -->
+
+<!-- <div class="container col-sm-4 d-flex pb-3 " *ngFor="let item of movieArrays">
+    <div class="row">
+        <div class="card  " style="width: 25rem;">
+            <img class="card-img-top" src="{{  'http://image.tmdb.org/t/p/w500/'   +item.poster_path}}" alt="Card image cap">
+            <div class="card-body ">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+
+
+
+
+<div id="main-container">
+    <div id="movie-list">
+
+        <div class="movie-card" *ngFor="let item of movieArrays">
+            <img src="{{  'http://image.tmdb.org/t/p/w500/'   +item.poster_path}}" alt="The Avengers Movie Poster">
+            <div class="desc">
+                <h3>{{item.title}}</h3>
+                <p>{{item.release_date}}</p>
+            </div>
+        </div>
+
+
+
     </div>
 
 </div>
