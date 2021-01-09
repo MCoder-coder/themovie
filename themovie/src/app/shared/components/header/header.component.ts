@@ -1,41 +1,54 @@
 
+import { MovieService } from './../../../core/service/movie.service';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 // import Swiper styles
-
+import { MoviePopularity } from "../../../core/models/moviepopularity";
 
 
 // import Swiper JS
 import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
+import { TrendingMovies } from 'src/app/core/models/movietrending';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  images: String[] = [
-    'assets/images/1.jpg',
-    'assets/images/2.jpg',
-    'assets/images/3.jpeg',
-  ];
 
-  constructor() { }
+
+  moviePopularity : TrendingMovies[] = []
+
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.fetchMovies()
   }
 
 
   ngAfterViewInit() {
     var mySwiper = new Swiper('.swiper-container', {
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      slidesPerView: 'auto',
+      autoplay: {
+        delay: 5000,
+      },
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
     });
   }
 
+
+  fetchMovies(){
+    this.movieService.getTrendingMovies()
+      .subscribe( moviespopularity => {
+        this.moviePopularity = moviespopularity
+      })
+     
+   }
 
 }
 

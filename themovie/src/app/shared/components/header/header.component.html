@@ -1,11 +1,12 @@
-<div class="swiper-container">
+<!-- Swiper -->
+<div class="swiper-container pt-5">
     <div class="swiper-wrapper">
-        <div class="swiper-slide" *ngFor="let item of images">
-            <img [src]="item" alt="">
+        <div class="swiper-slide" *ngFor="let item of moviePopularity">
+            <img src="{{  'http://image.tmdb.org/t/p/w500/'   +item.poster_path}}" alt="">
+
         </div>
 
     </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
 </div>

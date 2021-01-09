@@ -8,6 +8,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { map, retry, catchError } from 'rxjs/operators';
 
 import { environment } from './../../../environments/environment';
+import { MoviePopularity } from '../models/moviepopularity';
+import { TrendingMovies } from '../models/movietrending';
 
 @Injectable({
   providedIn: 'root',
@@ -29,5 +31,21 @@ export class MovieService{
     )
   }
 
+  getMoviesPopularity(){
+    return this.http.get<MoviePopularity[]>(`${this.urlMovieDb}` + 'discover/movie?with_people=108916,7467&sort_by=popularity.desc&api_key=' +  `${this.apikey}`)
+    .pipe(
+      retry(3),
+      map((response: any) => response.results as MoviePopularity[])
+    )
+  }
 
+  getTrendingMovies(){
+    return this.http.get<TrendingMovies[]>(`${this.urlMovieDb}` + 'trending/all/day?api_key=' +  `${this.apikey}`)
+
+    .pipe(
+      retry(3),
+      map((response: any) => response.results as TrendingMovies[])
+    )
+  }
+  
 }
