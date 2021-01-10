@@ -9,7 +9,8 @@ import { Movie } from './../../../core/models/movie.model';
 })
 export class HomeComponent implements OnInit {
 
-
+  uri =  'http://image.tmdb.org/t/p/w500/';
+  
   movieArrays: Movie[] = []
 
   constructor(private movieService: MovieService) { }

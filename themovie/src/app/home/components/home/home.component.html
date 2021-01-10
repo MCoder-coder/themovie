@@ -31,7 +31,7 @@
 
 
 
-
+<!-- 
 <div id="main-container">
     <div id="movie-list">
 
@@ -47,4 +47,37 @@
 
     </div>
 
-</div>
+</div> -->
+
+<div class="row">
+   
+    <div class="example-2 card" *ngFor="let item of movieArrays">
+      <div class="wrapper" [ngStyle]="{'background': '#fff url(' +  'http://image.tmdb.org/t/p/w500/' + item.poster_path +  ')  no-repeat 0 0'}">
+        <div class="header">
+          <div class="date">
+            <span class="day">{{item.release_date}}</span>
+   
+          </div>
+          <ul class="menu-content">
+            <li>
+              <a href="#" class="fa fa-bookmark-o"></a>
+            </li>
+            <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+            <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+          </ul>
+        </div>
+        <div class="data">
+          <div class="content">
+            <span class="author"> Popularity: {{item.popularity}}</span>
+            <h1 class="title"><a href="#">{{item.title}}</a></h1>
+            <p class="text">{{item.overview}}</p>
+            <a href="#" class="button">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
