@@ -24,7 +24,7 @@ export class MovieService{
 
 
   getMovies(){
-    return this.http.get<Movie[]>(  `${this.urlMovieDb}` +'discover/movie?sort_by=popularity.desc&api_key=' +  `${this.apikey}`)
+    return this.http.get<Movie[]>(  `${this.urlMovieDb}` +'discover/movie?sort_by=popularity.desc&api_key=' +  `${this.apikey}` + '&page=3')
     .pipe(
       retry(3),
       map((response: any) => response.results as Movie[])
@@ -47,5 +47,5 @@ export class MovieService{
       map((response: any) => response.results as TrendingMovies[])
     )
   }
-  
+
 }

@@ -2,6 +2,13 @@ import { Swiper } from 'swiper/bundle';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
+import { MovieService } from './../../../core/service/movie.service';
+
+// import Swiper styles
+import { MoviePopularity } from "../../../core/models/moviepopularity";
+import { TrendingMovies } from 'src/app/core/models/movietrending';
+
+
 
 
 @Component({
@@ -13,37 +20,39 @@ export class SwiperComponent implements OnInit , AfterViewInit {
 
 
 
+  moviePopularity : TrendingMovies[] = []
 
-  images: String[] = [
-    'assets/images/1.jpg',
-    'assets/images/2.jpg',
-    'assets/images/3.jpeg'
-  ];
+  constructor(private movieService: MovieService) { }
 
-  constructor() { }
+
+
+
 
   ngOnInit(): void {
+    this.fetchMovies()
   }
-
 
   ngAfterViewInit() {
     var mySwiper = new Swiper('.swiper-container', {
-
-      loop: true,
-
+      slidesPerView: 'auto',
       autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
+        delay: 5000,
       },
-
+      spaceBetween: 30,
       pagination: {
         el: '.swiper-pagination',
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        clickable: true,
       },
     });
   }
+
+
+  fetchMovies(){
+    this.movieService.getTrendingMovies()
+      .subscribe( moviespopularity => {
+        this.moviePopularity = moviespopularity
+      })
+
+   }
+
 }

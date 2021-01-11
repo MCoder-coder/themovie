@@ -1,3 +1,4 @@
+import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -23,6 +24,7 @@ import { HttpClient, HttpClientModule, HttpHeaders, HTTP_INTERCEPTORS } from '@a
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    HomeModule,
     CoreModule,
     HttpClientModule,
   ],

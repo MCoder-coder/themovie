@@ -1,6 +1,9 @@
-import { MovieService } from './../../../core/service/movie.service';
-import { Component, OnInit } from '@angular/core';
 import { Movie } from './../../../core/models/movie.model';
+
+
+import { MovieService } from './../../../core/service/movie.service';
+import { Component, OnInit, Input, Output , EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -9,13 +12,19 @@ import { Movie } from './../../../core/models/movie.model';
 })
 export class HomeComponent implements OnInit {
 
-  uri =  'http://image.tmdb.org/t/p/w500/';
-  
+  @Input() movie! : Movie
+  @Output() eventClicked: EventEmitter<any> = new EventEmitter();
+
+
+
   movieArrays: Movie[] = []
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService ) {
+
+  }
 
   ngOnInit(): void {
+
     this.fetchMovies();
   }
 
@@ -26,5 +35,18 @@ export class HomeComponent implements OnInit {
        console.log( movies)
      });
    }
+
+   clickBtn(){
+    console.log('evento clickBtn() ');
+    console.log('ID CLICKEADO: ', this.movie?.id);
+    this.eventClicked.emit(this.movie?.id);
+  }
+
+   // tslint:disable-next-line:typedef
+   clickEvent(id: number) {
+    console.log('clickEvent en event-gallery.ts');
+    console.log(id);
+
+  }
 
 }

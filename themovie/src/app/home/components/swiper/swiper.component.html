@@ -1,0 +1,12 @@
+<!-- Swiper -->
+<div class="swiper-container pt-5  background">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of moviePopularity">
+            <img src="{{  'http://image.tmdb.org/t/p/w500/'   +item.poster_path}}" alt="">
+
+        </div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
