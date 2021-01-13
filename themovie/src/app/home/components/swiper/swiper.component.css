@@ -19,10 +19,8 @@ img {
 
 .swiper-container {
     filter: drop-shadow(14px 10px 22px black);
-    margin-top: 300px;
+    margin-top: -281px;
 }
-
-.background {}
 
 .swiper-slide {
     text-align: center;
@@ -80,4 +78,10 @@ img {
     .swiper-slide:nth-child(3n) {
         width: 15%;
     }
+}
+
+.card__rating {
+    position: absolute;
+    margin-left: 103px;
+    margin-top: 167px;
 }

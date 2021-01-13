@@ -1,4 +1,6 @@
+import { MovieUpcoming } from './../../../core/models/movieupcoming';
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from 'src/app/core/service/movie.service';
 
 @Component({
   selector: 'app-slide',
@@ -7,17 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideComponent implements OnInit {
 
-  constructor() { }
+  movieUpcoming : MovieUpcoming[] = []
+
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.fetchMovieUpcoming()
   }
 
 
-  images: String[] = [
-    'assets/images/1.jpg',
-    'assets/images/2.jpg',
-    'assets/images/3.jpeg'
-  ];
+  fetchMovieUpcoming(){
+    this.movieService.getMovieUpcoming()
+   .subscribe(movieUpcomingResponse => {
+      this.movieUpcoming = []
+      this.movieUpcoming.push(movieUpcomingResponse)
+
+
+      console.log("movieUpcoming" ,movieUpcomingResponse)
+   })
+  }
+
+
 
 
 }

@@ -18,7 +18,7 @@ import { TrendingMovies } from 'src/app/core/models/movietrending';
 })
 export class SwiperComponent implements OnInit , AfterViewInit {
 
-
+  mySwiper: Swiper;
 
   moviePopularity : TrendingMovies[] = []
 
@@ -30,20 +30,26 @@ export class SwiperComponent implements OnInit , AfterViewInit {
 
   ngOnInit(): void {
     this.fetchMovies()
+
+
   }
 
   ngAfterViewInit() {
-    var mySwiper = new Swiper('.swiper-container', {
+
+    this.mySwiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
-      autoplay: {
-        delay: 5000,
-      },
       spaceBetween: 30,
+      autoplay: {
+        delay: 2000,
+      },
+
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
     });
+
+
   }
 
 

@@ -2,7 +2,14 @@
 <div class="swiper-container pt-5  background">
     <div class="swiper-wrapper">
         <div class="swiper-slide" *ngFor="let item of moviePopularity">
+            <div class="card__rating">
+                <circle-progress [percent]="item.vote_count" [radius]="25" [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="300" [startFromZero]="false"></circle-progress>
+            </div>
+
             <img src="{{  'http://image.tmdb.org/t/p/w500/'   +item.poster_path}}" alt="">
+
+
+
 
         </div>
 

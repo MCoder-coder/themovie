@@ -1,3 +1,4 @@
+$color-primary: #c62828; // red
 body {
     margin: auto;
 }
@@ -60,7 +61,11 @@ h1 {
     text-align: center;
     margin-top: 105px;
     margin-bottom: -45px;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Hoefler Text', Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 1.75em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .title-black {
@@ -72,6 +77,28 @@ h1 {
         /* On small screens, we are no longer using row direction but column */
         flex-direction: column;
     }
+}
+
+.card__rating {
+    position: absolute;
+    margin-left: 153px;
+    margin-top: 8px;
+    ;
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: -5px;
+        left: 0;
+        width: 50%;
+        height: 20px;
+    }
+}
+
+circle {
+    margin: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 
