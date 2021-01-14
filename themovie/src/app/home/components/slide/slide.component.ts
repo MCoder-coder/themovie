@@ -14,7 +14,7 @@ export class SlideComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
-    this.fetchMovieUpcoming()
+
   }
 
 

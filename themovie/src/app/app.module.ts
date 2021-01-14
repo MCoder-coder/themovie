@@ -22,7 +22,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     SharedModule,
     HomeModule,
